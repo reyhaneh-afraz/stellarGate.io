@@ -1,0 +1,439 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  height: 100%;
+  background-image: url(assets/image4.jpg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  direction: rtl;
+  background-attachment: fixed;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+#name {
+  background: linear-gradient(rgb(51, 61, 204), white, rgb(112, 38, 112));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  float: top;
+  top: 40px;
+  left: 50%;
+  position: absolute;
+  transform: translatex(-50%);
+  font-size: 3rem;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3),
+    0 0 20px rgba(173, 216, 230, 0.2), 0 0 30px rgba(147, 112, 219, 0.4);
+}
+
+@media screen and (max-width: 768px) {
+  #name {
+    font-size: 2rem; 
+  }
+}
+@media screen and (max-width: 480px) {
+  #name {
+    font-size: 2rem;
+    top: 70px;
+  }
+}
+
+.topnav {
+  background-color: #1a1f3a4b;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  background-color: rgba(44, 43, 65, 0.377);
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 2px;
+  transition: background-color 0.2s ease;
+}
+.topnav a:hover {
+  background-color: #b3b3b3;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #848be981;
+  color: white;
+}
+.topnav a.active:hover {
+  background-color: #473f5a;
+}
+
+#login-btn {
+  float: right;
+  color: rgb(255, 255, 255);
+  border: solid white 1px;
+  border-radius: 10rem;
+  background-color: #848be981;
+}
+#login-btn:hover {
+  background-color: #473f5a;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    border-color: rgb(0, 0, 0);
+  }
+  50% {
+    border-color: transparent;
+  }
+}
+
+#typewriter {
+  color: rgb(245, 241, 235);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  border-right: 2px solid rgb(224, 215, 215);
+  white-space: nowrap;
+  overflow: hidden;
+  float: left;
+  direction: ltr;
+  text-align: left;
+  white-space: pre-wrap;
+  width: fit-content;
+  margin-left: 4rem;
+  margin-top: 5rem;
+  animation: blink 1s steps(2, start) infinite;
+}
+@media (max-width: 480px) {
+  #typewriter {
+    margin-left: 2rem;
+    margin-top: 8rem;
+  }
+}
+.container {
+  position: fixed;
+  width: clamp(80px, 20vw, 190px);
+  height: clamp(80px, 20vw, 190px);
+  left: 10%;
+  top: 40%;
+}
+
+.main-btn {
+  -webkit-tap-highlight-color: transparent;
+  width: clamp(80px, 20vw, 190px);
+  height: clamp(80px, 20vw, 190px);
+  left: 15%;
+  top: 60%;
+  border-radius: 50%;
+  font-size: 18px;
+  border: none;
+  background-image: linear-gradient(
+    rgba(53, 1, 224, 0.918),
+    rgba(64, 39, 104, 0.438),
+    rgba(128, 70, 136, 0.822),
+    rgba(57, 19, 75, 0.795)
+  );
+  box-shadow: 0px 0px 30px 15px rgba(47, 74, 150, 0.534);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  animation: pulse 2s infinite ease-in-out;
+}
+.main-btn:active{
+  background: #969696;
+}
+@media (max-width: 480px) {
+  .main-btn {
+    margin-top: 60%;
+    width: clamp(100px, 20vw, 190px);
+    height: clamp(100px, 20vw, 190px);
+  }
+}
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.sub-btn {
+  text-align: center;
+  line-height: 80px;
+  text-decoration: none;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: none;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.9s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.sub-btn:active{
+  background: rgba(124, 121, 124, 0.4);
+}
+
+.sub1 {
+  transform: translateX(0);
+  top: 10px;
+  left: 7rem;
+  color: #ddd;
+  background-image: linear-gradient(
+    rgba(67, 125, 201, 0.623),
+    rgba(213, 192, 230, 0.788)
+  );
+  box-shadow: 0px 0px 30px 15px #473c6dde;
+}
+@media screen and (max-width: 480px) {
+  .sub1 {
+   margin-left: 5px;
+  }
+}
+.sub2 {
+  transform: translateY(0);
+  top: 120px;
+  left: 10px;
+  color: #ffffff;
+  background-image: linear-gradient(
+    rgba(205, 186, 228, 0.842),
+    rgba(122, 53, 201, 0.61)
+  );
+  box-shadow: 0px 0px 30px 15px rgba(71, 60, 109, 0.87);
+}
+.sub3 {
+  transform: translate(0, 0);
+  top: 80px;
+  left: 80px;
+  color: #ddd;
+  background-image: linear-gradient(
+    rgba(239, 226, 255, 0.932),
+    rgb(51, 82, 141)
+  );
+  box-shadow: 0px 0px 30px 15px rgba(71, 60, 109, 0.87);
+}
+
+.container.active .sub1 {
+  transform: translateX(120px);
+  opacity: 1;
+  pointer-events: auto;
+  @media screen and (max-width: 680px) {
+    left: 3rem;
+  }
+}
+.container.active .sub2 {
+  transform: translateY(120px);
+  opacity: 1;
+  pointer-events: auto;
+  @media screen and (max-width: 680px) {
+    top: 75px;
+  }
+}
+.container.active .sub3 {
+  transform: translate(120px, 120px);
+  opacity: 1;
+  pointer-events: auto;
+  @media screen and (max-width: 680px) {
+    left: 1rem;
+    top: 20px;
+  }
+}
+
+.astronaut-box {
+  position: fixed;
+  margin-top: 5rem;
+  margin-right: 3rem;
+  width: 15vw;
+  text-align: center;
+  min-width: 80px;
+  max-width: 120px;
+  z-index: 1000;
+}
+@media screen and (min-width: 700px) {
+  .astronaut-box {
+    width: 50%;
+    margin-right: 6rem;
+  }
+}
+@media screen and (min-width: 750px) {
+  .astronaut-box {
+    width: 50%;
+    margin-right: 6rem;
+  }
+}
+@media screen and (min-width: 800px) {
+  .astronaut-box {
+    width: 50%;
+    margin-right: 8rem;
+  }
+}
+@media screen and (min-width: 850px) {
+  .astronaut-box {
+    width: 50%;
+    margin-right: 9rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  .astronaut-box {
+    width: 50%;
+    margin-right: 10rem;
+  }
+}
+@media screen and (min-width: 950px) {
+  .astronaut-box {
+    width: 50%;
+    margin-right: 12rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .astronaut-box {
+    width: 50%;
+    margin-right: 15rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .astronaut-box {
+    width: 50%;
+    margin-right: 18rem;
+  }
+}
+
+.astronaut {
+  width: 100%;
+  height: auto;
+}
+
+.message-box {
+  position: absolute;
+  top: -40px;
+  color: white;
+  right: 0;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+@media screen and (max-width: 530px) {
+  .astronaut-box {
+    display: none;
+  }
+}
+
+.login-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  z-index: 100;
+}
+
+.login-overlay.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.login-box {
+  background: linear-gradient(145deg, #111 0%, #1e1e2f 100%);
+  padding: 40px 30px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 50px rgba(84, 44, 121, 0.89);
+  transform: scale(0.9);
+  transition: transform 0.5s ease;
+}
+
+.login-overlay.show .login-box {
+  transform: scale(1);
+}
+
+.login-box h2 {
+  margin-top: 0;
+  text-align: center;
+  color: rgb(122, 135, 255);
+  font-weight: bold;
+}
+
+.login-box input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #2a2a2a;
+  color: white;
+  font-size: 14px;
+}
+
+.login-box input::placeholder {
+  color: #aaa;
+}
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  background: rgb(151, 67, 247);
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  color: black;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-box button:hover {
+  background: #66359ea2;
+  transform: scale(1.03);
+}
+
+@media screen and (max-width: 600px) {
+  .login-box {
+    padding: 30px 20px;
+  }
+
+  .login-box h2 {
+    font-size: 20px;
+  }
+
+  .login-box input,
+  .login-box button {
+    font-size: 14px;
+  }
+}
+
+.stars {
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background: transparent
+    url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
+  animation: moveStars 100s linear infinite;
+  z-index: -100;
+}
+@keyframes moveStars {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-50%, -50%);
+  }
+}

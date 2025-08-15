@@ -1,0 +1,286 @@
+body{
+    margin: 0;
+    padding-top: 60px;
+}
+
+.topnav {
+    background-color: #00000011;
+    overflow: hidden;
+    width: 100%;
+    margin-top: -10px;
+  }
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 2px;
+    transition: background-color 0.5s ease;
+  }
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #848be981;
+    color: white;
+  }
+  .topnav a.active:hover {
+    background-color: #473f5a;
+  }
+  #login-btn:hover {
+    background-color: #473f5a;
+  }
+
+#login-btn{
+    float: right;
+    color: rgb(255, 255, 255);
+    border: solid white 1px;
+    border-radius: 10rem;
+    background-color: #212a5fd2;
+}
+
+
+
+.login-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    z-index: 100;
+  }
+  
+  /* وقتی کلاس show فعال شه */
+  .login-overlay.show {
+    opacity: 1;
+    pointer-events: all;
+  }
+  
+  /* جعبه‌ی اصلی لاگین */
+  .login-box {
+    background: linear-gradient(145deg, #111 0%, #1e1e2f 100%);
+    padding: 40px 30px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 0 50px rgba(84, 44, 121, 0.89);
+    transform: scale(0.9);
+    transition: transform 0.5s ease;
+  }
+  
+  /* وقتی باز می‌شه با افکت بزرگ شه */
+  .login-overlay.show .login-box {
+    transform: scale(1);
+  }
+  
+  /* عنوان داخل باکس */
+  .login-box h2 {
+    margin-top: 0;
+    text-align: center;
+    color: rgb(122, 135, 255);
+    font-weight: bold;
+  }
+  
+  /* فیلدهای ایمیل و پسورد */
+  .login-box input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #2a2a2a;
+    color: white;
+    font-size: 14px;
+  }
+  
+  .login-box input::placeholder {
+    color: #aaa;
+  }
+  
+  /* دکمه ورود */
+  .login-box button {
+    width: 100%;
+    padding: 12px;
+    background: rgb(151, 67, 247);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .login-box button:hover {
+    background: #66359ea2;
+    transform: scale(1.03);
+  }
+  
+  /* واکنش‌گرا برای موبایل */
+  @media screen and (max-width: 600px) {
+    .login-box {
+      padding: 30px 20px;
+    }
+  
+    .login-box h2 {
+      font-size: 20px;
+    }
+  
+    .login-box input,
+    .login-box button {
+      font-size: 14px;
+    }
+  }
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(0, 0, 30, 0.7);
+    backdrop-filter: blur(5px);
+    position: sticky;
+    top: 0;
+}
+.news-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    padding: 50px;
+}
+
+.news-card {
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+.news-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.news-card h2 {
+    font-size: 1.1rem;
+    margin: 15px;
+}
+
+.news-card p {
+    font-size: 0.9rem;
+    margin: 0 15px 15px;
+    color: #ccc;
+}
+
+.news-card a {
+    display: inline-block;
+    margin: 0 15px 15px;
+    padding: 8px 15px;
+    
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.footer {
+    text-align: center;
+    padding: 15px;
+    background: rgba(0, 0, 30, 0.7);
+    font-size: 0.85rem;
+    color: #ccc;
+}
+
+body {
+    background: radial-gradient(circle at center, #1a1a3f 0%, #0a0a1a 100%);
+    color: white;
+    padding: 20px;
+}
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.news-card {
+    flex: 1 1 calc(50% - 20px); /* دو ستون */
+    max-width: calc(50% - 20px);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+.news-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.news-card h2 {
+    font-size: 1.1rem;
+    margin: 15px;
+}
+
+.news-card p {
+    font-size: 0.9rem;
+    margin: 0 15px 15px;
+    color: #ccc;
+}
+.news-card a {
+    display: inline-block;
+    margin: 0 15px 15px;
+    padding: 8px 15px;
+    background: #726bce;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
+    align-self: flex-start;
+}
+
+.news-card a:hover {
+    background: #3f3b97;
+}
+
+@media (max-width: 768px) {
+    .news-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}

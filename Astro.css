@@ -1,0 +1,200 @@
+
+.topnav {
+  background-color: #1a1f3a4b;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  background-color: rgba(44, 43, 65, 0.377);
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+}
+.topnav a:hover {
+  background-color: #b3b3b3;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #848be981;
+  color: white;
+}
+.topnav a.active:hover {
+  background-color: #473f5a;
+}
+
+#login-btn {
+  float: right;
+  color: rgb(255, 255, 255);
+  border: solid white 1px;
+  border-radius: 10rem;
+  background-color: #848be981;
+}
+#login-btn:hover {
+  background-color: #473f5a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Vazirmatn', sans-serif;
+  background: radial-gradient(circle at bottom, #0d0d2b, #000);
+  color: white;
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* ستاره‌های متحرک (لایه پس‌زمینه) */
+.stars {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0; left: 0;
+  background:
+    radial-gradient(2px 2px at 20% 30%, white, transparent),
+    radial-gradient(1.5px 1.5px at 50% 60%, white, transparent),
+    radial-gradient(1px 1px at 80% 40%, white, transparent),
+    radial-gradient(2.5px 2.5px at 70% 80%, white, transparent);
+  background-repeat: no-repeat;
+  animation: starMove 90s linear infinite;
+  z-index: 0;
+}
+@keyframes starMove {
+  from {background-position: 0 0, 0 0, 0 0, 0 0;}
+  to {background-position: -1000px 500px, 500px -500px, 1000px 800px, -500px -300px;}
+}
+
+header {
+  text-align: center;
+  padding: 20px 10px 10px;
+  z-index: 1;
+  position: relative;
+  font-size: 2em;
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px #6b4aff;
+}
+
+/* اسلایدر */
+
+.slider-container {
+  margin: 20px auto;
+  max-width: 8500px;
+  overflow-x: auto;
+  padding: 10px 0;
+  z-index: 1;
+  position: relative;
+}
+.slider {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-bottom: 15px;
+}
+
+/* برای موبایل، ستون‌ها کم میشن */
+@media (max-width: 600px) {
+  .slider {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+}
+/* کارت ماه کوچک */
+.month-card {
+  background: rgba(27, 27, 58, 0.8);
+  border-radius: 15px;
+  min-width: 120px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 0 10px #6b4aff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+.month-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #ff4ad8;
+}
+
+.month-card img {
+  width: 60px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 0 3px #a57aff);
+}
+
+/* کارت اصلی بزرگ */
+#mainCard {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(27, 27, 58, 0.95);
+  border-radius: 20px;
+  padding: 25px;
+  max-width: 600px;
+  height: auto;
+  box-shadow: 0 0 40px #ff4ad8;
+  text-align: center;
+  z-index: 10;
+  color: white;
+  animation: fadeInScale 0.4s ease forwards;
+}
+
+#mainCard.hidden {
+  display: none;
+}
+
+#mainCard img {
+  width: 150px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 8px #a57aff);
+}
+
+#mainCard h2 {
+  margin: 0 0 10px;
+  font-size: 1.6em;
+  text-shadow: 0 0 8px #ff4ad8;
+}
+
+#mainCard p {
+  font-size: 1.1em;
+  line-height: 1.4;
+}
+
+#closeCard {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  color: #ff4ad8;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+#closeCard:hover {
+  color: #fc9a9e;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
